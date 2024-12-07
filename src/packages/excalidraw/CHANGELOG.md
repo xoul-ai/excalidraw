@@ -11,6 +11,81 @@ The change should be grouped under one of the below section and must contain PR 
 Please add the latest change on the top under the correct section.
 -->
 
+## Excalidraw Library
+
+**_This section lists the updates made to the excalidraw library and will not affect the integration._**
+
+### Features
+
+- Load old library if migration fails
+
+- Change LibraryPersistenceAdapter `load()` `source` -> `priority`
+
+### Fixes
+
+- Parse embeddable srcdoc urls strictly & escape attribute url html
+
+---
+## Excalidraw Library
+
+**_This section lists the updates made to the excalidraw library and will not affect the integration._**
+
+### Features
+
+- Load old library if migration fails
+
+- Change LibraryPersistenceAdapter `load()` `source` -> `priority`
+
+### Fixes
+
+- Parse embeddable srcdoc urls strictly & escape attribute url html
+
+---
+## Excalidraw Library
+
+**_This section lists the updates made to the excalidraw library and will not affect the integration._**
+
+### Features
+
+- Load old library if migration fails
+
+- Change LibraryPersistenceAdapter `load()` `source` -> `priority`
+
+### Fixes
+
+- Parse embeddable srcdoc urls strictly & escape attribute url html
+
+---
+## Excalidraw Library
+
+**_This section lists the updates made to the excalidraw library and will not affect the integration._**
+
+### Features
+
+- Load old library if migration fails
+
+- Change LibraryPersistenceAdapter `load()` `source` -> `priority`
+
+### Fixes
+
+- Parse embeddable srcdoc urls strictly & escape attribute url html
+
+---
+## Excalidraw Library
+
+**_This section lists the updates made to the excalidraw library and will not affect the integration._**
+
+### Features
+
+- Load old library if migration fails
+
+- Change LibraryPersistenceAdapter `load()` `source` -> `priority`
+
+### Fixes
+
+- Parse embeddable srcdoc urls strictly & escape attribute url html
+
+---
 ## 0.17.6 (2024-12-07)
 
 ### Features
@@ -2257,6 +2332,40 @@ First release of `@excalidraw/excalidraw`## Excalidraw Library
 - Allow a range of major node versions [#7306](https://github.com/excalidraw/excalidraw/pull/7306)
 
 - Use caret for specifying node version to avoid major upgrades automatically [#7297](https://github.com/excalidraw/excalidraw/pull/7297)
+
+---
+## Excalidraw Library
+
+**_This section lists the updates made to the excalidraw library and will not affect the integration._**
+
+### Features
+
+- Load old library if migration fails
+
+- Change LibraryPersistenceAdapter `load()` `source` -> `priority`
+
+### Fixes
+
+- Change package.json
+
+- Parse embeddable srcdoc urls strictly & escape attribute url html
+
+---
+## Excalidraw Library
+
+**_This section lists the updates made to the excalidraw library and will not affect the integration._**
+
+### Features
+
+- Load old library if migration fails
+
+- Change LibraryPersistenceAdapter `load()` `source` -> `priority`
+
+### Fixes
+
+- Change package.json
+
+- Parse embeddable srcdoc urls strictly & escape attribute url html
 
 ---
 
