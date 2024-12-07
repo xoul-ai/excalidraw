@@ -1,5 +1,5 @@
 {
-  "name": "@excalidraw/excalidraw",
+  "name": "@xoul/excalidraw",
   "version": "0.17.6",
   "main": "main.js",
   "types": "types/packages/excalidraw/index.d.ts",
