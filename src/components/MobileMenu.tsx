@@ -43,6 +43,7 @@ type MobileMenuProps = {
     appState: UIAppState,
   ) => JSX.Element | null;
   renderCustomStats?: ExcalidrawProps["renderCustomStats"];
+  renderTopToolbarUI?: ExcalidrawProps["renderTopToolbar"];
   renderSidebars: () => JSX.Element | null;
   device: Device;
   renderWelcomeScreen: boolean;
@@ -66,6 +67,7 @@ export const MobileMenu = ({
   renderWelcomeScreen,
   UIOptions,
   app,
+  renderTopToolbarUI,
 }: MobileMenuProps) => {
   const {
     WelcomeScreenCenterTunnel,
@@ -91,6 +93,7 @@ export const MobileMenu = ({
                     />
                   </Stack.Row>
                 </Island>
+                {renderTopToolbarUI && renderTopToolbarUI(true, appState)}
                 {renderTopRightUI && renderTopRightUI(true, appState)}
                 <div className="mobile-misc-tools-container">
                   {!appState.viewModeEnabled && (

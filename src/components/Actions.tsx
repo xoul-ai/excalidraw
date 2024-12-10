@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { ReactNode } from "react";
 import { ActionManager } from "../actions/manager";
 import { getNonDeletedElements } from "../element";
 import { ExcalidrawElement } from "../element/types";
@@ -29,15 +29,15 @@ import {
 } from "../element/textElement";
 
 import "./Actions.scss";
-import DropdownMenu from "./dropdownMenu/DropdownMenu";
-import {
-  EmbedIcon,
-  extraToolsIcon,
-  frameToolIcon,
-  mermaidLogoIcon,
-  laserPointerToolIcon,
-} from "./icons";
-import { KEYS } from "../keys";
+// import DropdownMenu from "./dropdownMenu/DropdownMenu";
+// import {
+//   EmbedIcon,
+//   extraToolsIcon,
+//   frameToolIcon,
+//   mermaidLogoIcon,
+//   laserPointerToolIcon,
+// } from "./icons";
+// import { KEYS } from "../keys";
 
 export const SelectedShapeActions = ({
   appState,
@@ -225,11 +225,11 @@ export const ShapesSwitcher = ({
   app: AppClassProperties;
   UIOptions: AppProps["UIOptions"];
 }) => {
-  const [isExtraToolsMenuOpen, setIsExtraToolsMenuOpen] = useState(false);
+  // const [isExtraToolsMenuOpen, setIsExtraToolsMenuOpen] = useState(false);
 
-  const frameToolSelected = activeTool.type === "frame";
-  const laserToolSelected = activeTool.type === "laser";
-  const embeddableToolSelected = activeTool.type === "embeddable";
+  // const frameToolSelected = activeTool.type === "frame";
+  // const laserToolSelected = activeTool.type === "laser";
+  // const embeddableToolSelected = activeTool.type === "embeddable";
 
   return (
     <>
@@ -282,9 +282,10 @@ export const ShapesSwitcher = ({
           />
         );
       })}
+
       <div className="App-toolbar__divider" />
 
-      <DropdownMenu open={isExtraToolsMenuOpen}>
+      {/* <DropdownMenu open={isExtraToolsMenuOpen}>
         <DropdownMenu.Trigger
           className={clsx("App-toolbar__extra-tools-trigger", {
             "App-toolbar__extra-tools-trigger--selected":
@@ -339,7 +340,7 @@ export const ShapesSwitcher = ({
             {t("toolBar.mermaidToExcalidraw")}
           </DropdownMenu.Item>
         </DropdownMenu.Content>
-      </DropdownMenu>
+      </DropdownMenu> */}
     </>
   );
 };

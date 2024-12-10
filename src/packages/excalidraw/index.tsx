@@ -24,6 +24,7 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
     isCollaborating = false,
     onPointerUpdate,
     renderTopRightUI,
+    renderTopToolbar,
     langCode = defaultLang.code,
     viewModeEnabled,
     zenModeEnabled,
@@ -55,9 +56,6 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
     canvasActions: {
       ...DEFAULT_UI_OPTIONS.canvasActions,
       ...canvasActions,
-    },
-    tools: {
-      image: props.UIOptions?.tools?.image ?? true,
     },
   };
 
@@ -102,12 +100,13 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
           isCollaborating={isCollaborating}
           onPointerUpdate={onPointerUpdate}
           renderTopRightUI={renderTopRightUI}
+          renderTopToolbar={renderTopToolbar}
           langCode={langCode}
           viewModeEnabled={viewModeEnabled}
           zenModeEnabled={zenModeEnabled}
           gridModeEnabled={gridModeEnabled}
           libraryReturnUrl={libraryReturnUrl}
-          theme={theme}
+          theme={theme || "dark"}
           name={name}
           renderCustomStats={renderCustomStats}
           UIOptions={UIOptions}
@@ -237,6 +236,7 @@ export {
 
 export { Sidebar } from "../../components/Sidebar/Sidebar";
 export { Button } from "../../components/Button";
+export { ToolButton } from "../../components/ToolButton";
 export { Footer };
 export { MainMenu };
 export { useDevice } from "../../components/App";

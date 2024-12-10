@@ -35,6 +35,7 @@ import type { IMAGE_MIME_TYPES, MIME_TYPES } from "./constants";
 import { ContextMenuItems } from "./components/ContextMenu";
 import { SnapLine } from "./snapping";
 import { Merge, ValueOf } from "./utility-types";
+import { SHAPES } from "./shapes";
 
 export type Point = Readonly<RoughPoint>;
 
@@ -396,6 +397,10 @@ export interface ExcalidrawProps {
     isMobile: boolean,
     appState: UIAppState,
   ) => JSX.Element | null;
+  renderTopToolbar?: (
+    isMobile: boolean,
+    appState: UIAppState,
+  ) => JSX.Element | null;
   langCode?: Language["code"];
   viewModeEnabled?: boolean;
   zenModeEnabled?: boolean;
@@ -481,12 +486,12 @@ export type CanvasActions = Partial<{
   saveAsImage: boolean;
 }>;
 
+type ShapeValue = typeof SHAPES[number]["value"];
+
 export type UIOptions = Partial<{
   dockedSidebarBreakpoint: number;
   canvasActions: CanvasActions;
-  tools: {
-    image: boolean;
-  };
+  tools: Partial<Record<ShapeValue, boolean>>;
   /** @deprecated does nothing. Will be removed in 0.15 */
   welcomeScreen?: boolean;
 }>;

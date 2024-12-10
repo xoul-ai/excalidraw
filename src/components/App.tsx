@@ -1161,7 +1161,8 @@ class App extends React.Component<AppProps, AppState> {
 
   public render() {
     const selectedElements = this.scene.getSelectedElements(this.state);
-    const { renderTopRightUI, renderCustomStats } = this.props;
+    const { renderTopRightUI, renderCustomStats, renderTopToolbar } =
+      this.props;
 
     const versionNonce = this.scene.getVersionNonce();
     const { canvasElements, visibleElements } =
@@ -1236,6 +1237,7 @@ class App extends React.Component<AppProps, AppState> {
                           langCode={getLanguage().code}
                           renderTopRightUI={renderTopRightUI}
                           renderCustomStats={renderCustomStats}
+                          renderTopToolbarUI={renderTopToolbar}
                           showExitZenModeBtn={
                             typeof this.props?.zenModeEnabled === "undefined" &&
                             this.state.zenModeEnabled

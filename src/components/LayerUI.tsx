@@ -71,6 +71,7 @@ interface LayerUIProps {
   langCode: Language["code"];
   renderTopRightUI?: ExcalidrawProps["renderTopRightUI"];
   renderCustomStats?: ExcalidrawProps["renderCustomStats"];
+  renderTopToolbarUI?: ExcalidrawProps["renderTopToolbar"];
   UIOptions: AppProps["UIOptions"];
   onExportImage: AppClassProperties["onExportImage"];
   renderWelcomeScreen: boolean;
@@ -132,6 +133,7 @@ const LayerUI = ({
   renderWelcomeScreen,
   children,
   app,
+  renderTopToolbarUI,
   isCollaborating,
 }: LayerUIProps) => {
   const device = useDevice();
@@ -283,16 +285,7 @@ const LayerUI = ({
                             UIOptions={UIOptions}
                             app={app}
                           />
-                        </Stack.Row>
-                      </Island>
-                      {isCollaborating && (
-                        <Island
-                          style={{
-                            marginLeft: 8,
-                            alignSelf: "center",
-                            height: "fit-content",
-                          }}
-                        >
+
                           <LaserPointerButton
                             title={t("toolBar.laser")}
                             checked={appState.activeTool.type === "laser"}
@@ -301,8 +294,12 @@ const LayerUI = ({
                             }
                             isMobile
                           />
-                        </Island>
-                      )}
+                          {renderTopToolbarUI?.(
+                            device.editor.isMobile,
+                            appState,
+                          )}
+                        </Stack.Row>
+                      </Island>
                     </Stack.Row>
                   </Stack.Col>
                 </div>
